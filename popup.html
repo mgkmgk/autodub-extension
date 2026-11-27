@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VideoDubber TR</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <span class="icon">🎙️</span>
+      <span class="title">VideoDubber TR</span>
+    </div>
+    <div id="serverStatus" class="status-badge checking">Kontrol ediliyor...</div>
+  </div>
+
+  <div class="main-toggle-card">
+    <div class="toggle-info">
+      <div class="toggle-title">Canlı Dublaj</div>
+      <div class="toggle-desc">YouTube'da otomatik seslendir</div>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="dubbingToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="setting-group">
+    <label class="setting-label" for="voiceSelect">Ses Modeli</label>
+    <select id="voiceSelect" class="form-select">
+      <option value="tr-TR-AhmetNeural">Ahmet (Erkek - Ultra-HD Doğal)</option>
+      <option value="tr-TR-EmelNeural">Emel (Kadın - Ultra-HD Doğal)</option>
+    </select>
+  </div>
+
+  <div class="setting-group">
+    <div class="slider-header">
+      <span class="setting-label">Orijinal Video Ses Kısma Oranı</span>
+      <span id="volumeValue" class="slider-value">%20</span>
+    </div>
+    <input type="range" id="volumeRange" min="5" max="50" value="20" class="range-slider">
+  </div>
+
+  <div class="server-help-card" id="serverHelpCard">
+    <div class="help-title">💡 Ultra-HD Neural Ses İpucu</div>
+    <div class="help-text">
+      Neredeyse insan kadar doğal Türkçe ses için klasördeki <b>VideoDubber-Ses-Motoru.exe</b> dosyasına çift tıklayabilirsiniz (Python kurulumu gerekmez).
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Hedef Dil: <b>Türkçe</b></span>
+    <span>v1.0.0</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
